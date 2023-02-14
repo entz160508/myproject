@@ -447,10 +447,10 @@
                         </dl>
                     </fieldset> -->
 
-                    <!-- <div class="btn_area col2">
+                    <div class="btn_area col2">
                         <button type="button" class="btn_st1 jCancel">취소</button>
                         <button type="button" class="btn_st1 jOk">가입하기</button>
-                    </div> -->
+                    </div>
 
             </section>
 
