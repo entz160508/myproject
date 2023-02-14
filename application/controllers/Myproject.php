@@ -21,7 +21,8 @@ class Myproject extends CI_Controller {
         public function index()
         {
                 #$this->load->view('welcome_message');
-                echo "Welcome My First Project Page";
+                #echo "Welcome My First Project Page";
+                $this->load->view('welcome_message');
         }
 
 
