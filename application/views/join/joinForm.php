@@ -101,66 +101,70 @@
 
 
             $('.jOk').click(function(){
-                var url = "/join/joinMem";
+                alert("access");
+                console.log($('#mem_id').val());
+                // <input type="email" name="mem_id" id="mem_id" maxlength="16" autofocus required placeholder="아이디" requireMsg="아이디를 입력해주세요.">
 
-                var airCd = $("#mem_air_code").val();
-                var airMemId = $("#mem_air_id").val();
+                // var url = "/join/joinMem";
 
-                var isValid = true;
-                // - 핸드폰 번호 DB에 안들어감
+                // var airCd = $("#mem_air_code").val();
+                // var airMemId = $("#mem_air_id").val();
 
-                // 빈값 체크
-                $("[required]").each(function(){
-                    if($(this).val() == "")
-                    {
-                        alert($(this).attr("requireMsg"));
-                        $(this).focus();
-                        isValid = false;
-                        return false;
-                    }
-                });
+                // var isValid = true;
+                // // - 핸드폰 번호 DB에 안들어감
+
+                // // 빈값 체크
+                // $("[required]").each(function(){
+                //     if($(this).val() == "")
+                //     {
+                //         alert($(this).attr("requireMsg"));
+                //         $(this).focus();
+                //         isValid = false;
+                //         return false;
+                //     }
+                // });
 
 
-                //숫자만 체크
-                $("[number_only]").each(function(){
-                    var numVal = $(this).val();
-                    var numExp = /^[0-9]*$/;
-                    if(numVal != "" && numExp.test(numVal) == false)
-                    {
-                        alert("숫자만 입력가능합니다.");
-                        $(this).focus();
-                        isValid = false;
-                        return false;
-                    }
-                });
+                // //숫자만 체크
+                // $("[number_only]").each(function(){
+                //     var numVal = $(this).val();
+                //     var numExp = /^[0-9]*$/;
+                //     if(numVal != "" && numExp.test(numVal) == false)
+                //     {
+                //         alert("숫자만 입력가능합니다.");
+                //         $(this).focus();
+                //         isValid = false;
+                //         return false;
+                //     }
+                // });
 
-                //이메일 체크
-                $("[email_only]").each(function(){
-                    var emailVal = $(this).val();
-                    var emailExp = /^[-A-Za-z0-9_]+[-A-Za-z0-9_.]*[@]{1}[-A-Za-z0-9_]+[-A-Za-z0-9_.]*[.]{1}[A-Za-z]{2,5}$/;
-                    if(emailVal != "" && emailExp.test(emailVal) == false)
-                    {
-                        alert("정확한 이메일이 아닙니다.");
-                        $(this).focus();
-                        isValid = false;
-                        return false;
-                    }
-                });
+                // //이메일 체크
+                // $("[email_only]").each(function(){
+                //     var emailVal = $(this).val();
+                //     var emailExp = /^[-A-Za-z0-9_]+[-A-Za-z0-9_.]*[@]{1}[-A-Za-z0-9_]+[-A-Za-z0-9_.]*[.]{1}[A-Za-z]{2,5}$/;
+                //     if(emailVal != "" && emailExp.test(emailVal) == false)
+                //     {
+                //         alert("정확한 이메일이 아닙니다.");
+                //         $(this).focus();
+                //         isValid = false;
+                //         return false;
+                //     }
+                // });
 
-                // 한글 ,영문 이름 공백 체크
-                $("[space_not]").each(function(){
-                    // 공백 정규화 및 앞뒤 공백 제거
-                    var blank_pattern = /[\s]/gi;
-                    var str = $(this).val().replace(/(^\s*)|(\s*$)/,"");
+                // // 한글 ,영문 이름 공백 체크
+                // $("[space_not]").each(function(){
+                //     // 공백 정규화 및 앞뒤 공백 제거
+                //     var blank_pattern = /[\s]/gi;
+                //     var str = $(this).val().replace(/(^\s*)|(\s*$)/,"");
 
-                    if( blank_pattern.test(str) ) {
-                        alert(' 공백은 사용할 수 없습니다. ');
-                        $(this).focus();
-                        isValid = false;
-                        return false;
-                    }
+                //     if( blank_pattern.test(str) ) {
+                //         alert(' 공백은 사용할 수 없습니다. ');
+                //         $(this).focus();
+                //         isValid = false;
+                //         return false;
+                //     }
 
-                    $(this).val(str);
+                //     $(this).val(str);
                 });
 
                 if(isValid == false)
