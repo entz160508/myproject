@@ -103,6 +103,7 @@
             $('.jOk').click(function(){
                 alert("access");
                 console.log($('#mem_id').val());
+
                 // <input type="email" name="mem_id" id="mem_id" maxlength="16" autofocus required placeholder="아이디" requireMsg="아이디를 입력해주세요.">
 
                 // var url = "/join/joinMem";
@@ -111,9 +112,9 @@
                 // var airMemId = $("#mem_air_id").val();
 
                 // var isValid = true;
-                // // - 핸드폰 번호 DB에 안들어감
+                // - 핸드폰 번호 DB에 안들어감
 
-                // // 빈값 체크
+                // 빈값 체크
                 // $("[required]").each(function(){
                 //     if($(this).val() == "")
                 //     {
@@ -125,7 +126,7 @@
                 // });
 
 
-                // //숫자만 체크
+                //숫자만 체크
                 // $("[number_only]").each(function(){
                 //     var numVal = $(this).val();
                 //     var numExp = /^[0-9]*$/;
@@ -138,7 +139,7 @@
                 //     }
                 // });
 
-                // //이메일 체크
+                //이메일 체크
                 // $("[email_only]").each(function(){
                 //     var emailVal = $(this).val();
                 //     var emailExp = /^[-A-Za-z0-9_]+[-A-Za-z0-9_.]*[@]{1}[-A-Za-z0-9_]+[-A-Za-z0-9_.]*[.]{1}[A-Za-z]{2,5}$/;
@@ -151,7 +152,7 @@
                 //     }
                 // });
 
-                // // 한글 ,영문 이름 공백 체크
+                // 한글 ,영문 이름 공백 체크
                 // $("[space_not]").each(function(){
                 //     // 공백 정규화 및 앞뒤 공백 제거
                 //     var blank_pattern = /[\s]/gi;
@@ -165,66 +166,66 @@
                 //     }
 
                 //     $(this).val(str);
-                });
+                // });
 
-                if(isValid == false)
-                    return false;
+                // if(isValid == false)
+                //     return false;
 
-                if(idChkFlag == false)
-                {
-                    alert("아이디 중복체크를 해주세요.");
-                    return false;
-                }
+                // if(idChkFlag == false)
+                // {
+                //     alert("아이디 중복체크를 해주세요.");
+                //     return false;
+                // }
 
-                var birthDate = $("select[name='mem_ssn[]']:eq(0) option:selected").val()+$("select[name='mem_ssn[]']:eq(1) option:selected").val()+$("select[name='mem_ssn[]']:eq(2) option:selected").val();
-                var today = new Date();
-                var yyyy = today.getFullYear();
-                var mm = today.getMonth() < 9 ? "0" + (today.getMonth() + 1) : (today.getMonth() + 1); // getMonth()
-                var dd  = today.getDate() < 10 ? "0" + today.getDate() : today.getDate();
+                // var birthDate = $("select[name='mem_ssn[]']:eq(0) option:selected").val()+$("select[name='mem_ssn[]']:eq(1) option:selected").val()+$("select[name='mem_ssn[]']:eq(2) option:selected").val();
+                // var today = new Date();
+                // var yyyy = today.getFullYear();
+                // var mm = today.getMonth() < 9 ? "0" + (today.getMonth() + 1) : (today.getMonth() + 1); // getMonth()
+                // var dd  = today.getDate() < 10 ? "0" + today.getDate() : today.getDate();
 
-                if(parseInt(yyyy+''+mm+''+dd) - parseInt(birthDate) - 140000 < 0) {
-                    alert("만 14세 미만은 가입 불가능 합니다.");
-                    return false;
-                }
+                // if(parseInt(yyyy+''+mm+''+dd) - parseInt(birthDate) - 140000 < 0) {
+                //     alert("만 14세 미만은 가입 불가능 합니다.");
+                //     return false;
+                // }
 
 
-                if(airCd == 'KE'){
-                    if(airMemId.length !== 12){
-                        alert("대한항공 마일리지 적립을 원하실 경우, \n" +
-                            "숫자 12자리로 구성된 대한항공 신회원번호를 입력 해주세요.\n");
-                        return false;
-                    }
-                } else if(airCd == 'OZ'){
-                    if(airMemId.length !== 9){
-                        alert("아시아나 마일리지 적립을 원하실 경우, \n" +
-                            "OZ를 제외한 회원번호 9자리만 입력 해주세요.");
-                        return false;
-                    }
-                }
+                // if(airCd == 'KE'){
+                //     if(airMemId.length !== 12){
+                //         alert("대한항공 마일리지 적립을 원하실 경우, \n" +
+                //             "숫자 12자리로 구성된 대한항공 신회원번호를 입력 해주세요.\n");
+                //         return false;
+                //     }
+                // } else if(airCd == 'OZ'){
+                //     if(airMemId.length !== 9){
+                //         alert("아시아나 마일리지 적립을 원하실 경우, \n" +
+                //             "OZ를 제외한 회원번호 9자리만 입력 해주세요.");
+                //         return false;
+                //     }
+                // }
 
-                var promise = $.ajax({
-                    url: url,
-                    data: $('#base_form').serialize(),
-                    method: "post",
-                    dataType: "json",
-                    async: true,
-                    cache: false
-                });
+                // var promise = $.ajax({
+                //     url: url,
+                //     data: $('#base_form').serialize(),
+                //     method: "post",
+                //     dataType: "json",
+                //     async: true,
+                //     cache: false
+                // });
 
-                promise.done(function (data, textStatus, jqXHR) {
-                    if(data == true){
-                        location.href="/join/join_done";
+                // promise.done(function (data, textStatus, jqXHR) {
+                //     if(data == true){
+                //         location.href="/join/join_done";
 
-                    } else {
-                        alert("이미 가입된 이메일 입니다.") ;
-                        $('#mem_email').val("") ;
-                    }
-                });
+                //     } else {
+                //         alert("이미 가입된 이메일 입니다.") ;
+                //         $('#mem_email').val("") ;
+                //     }
+                // });
 
-                promise.fail(function (jqXHR, textStatus, errorThrown) {
-                    alert("이미 가입된 이메일 입니다.") ;
-                    $('#mem_email').val("") ;
-                });
+                // promise.fail(function (jqXHR, textStatus, errorThrown) {
+                //     alert("이미 가입된 이메일 입니다.") ;
+                //     $('#mem_email').val("") ;
+                // });
             });
 
         });
