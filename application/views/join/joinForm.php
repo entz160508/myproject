@@ -336,7 +336,7 @@
                 </div>
 
                     <input type="hidden" name="vendor" value="AL">
-                    <input type="hidden" name="rurl" value="<?= $okRetURL ?>">
+                    <!-- <input type="hidden" name="rurl" value="<?= $okRetURL ?>"> -->
                     <input type="hidden" name="flow" value="ToS">
 
                     <fieldset class="user_info">
@@ -362,7 +362,7 @@
                         </dl>
                     </fieldset>
 
-                    <fieldset class="user_name">
+                    <!-- <fieldset class="user_name">
                         <legend class="blind">사용자 이름 입력폼</legend>
                         <dl>
                             <dt>한글이름</dt>
@@ -376,9 +376,9 @@
                                 <input type="email" placeholder="영문 이름 (여권명)" required space_not requireMsg="영문 이름 (여권명)을 입력해주세요." name="mem_lnm_en" maxlength="32" >
                             </dd>
                         </dl>
-                    </fieldset>
+                    </fieldset> -->
 
-                    <fieldset>
+                    <!-- <fieldset>
                         <legend class="blind">사용자 연락처 입력폼</legend>
                         <dl class="user_contact">
                             <dd class="tel_area">
@@ -445,12 +445,12 @@
                                 </label>
                             </dd>
                         </dl>
-                    </fieldset>
+                    </fieldset> -->
 
-                    <div class="btn_area col2">
+                    <!-- <div class="btn_area col2">
                         <button type="button" class="btn_st1 jCancel">취소</button>
                         <button type="button" class="btn_st1 jOk">가입하기</button>
-                    </div>
+                    </div> -->
 
             </section>
 
