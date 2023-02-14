@@ -75,7 +75,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 		<p><a href="http://35.206.199.78/join/joinAccount">join</a></p>
 	</div>
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php $IP = $_SERVER['REMOTE_ADDR']; echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION  : '';  echo "Your IP is : " . $IP; .'</strong>' ?></p></div>
+	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php $IP = $_SERVER['REMOTE_ADDR']; echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION  : '';  echo "Your IP is : " . $IP; .'</strong>' . ?></p></div>
 	
 </body>
 </html>
