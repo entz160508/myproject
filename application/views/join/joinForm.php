@@ -214,6 +214,8 @@
                     cache: false
                 });
 
+                joinPage();
+
                 // promise.done(function (data, textStatus, jqXHR) {
                 //     if(data == true){
                 //         location.href="/join/join_done";
@@ -232,6 +234,9 @@
 
         });
 
+        function joinPage()  {
+            window.location.href = 'http://35.206.199.78/join/joinMem'
+        }
 
         function validate_id()
         {
