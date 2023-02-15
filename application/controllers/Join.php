@@ -9,9 +9,10 @@ class Join extends CI_Controller {
         }
 
         public function joinMem(){
-                $memID = $this->input->post("mem_id");
-                echo $memID;
-                var_dump($memID);
+                // $memID = $this->input->post("mem_id");
+                // echo $memID;
+                // var_dump($memID);
+                var_dump($_POST);
         }
 
 }
