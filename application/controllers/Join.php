@@ -8,4 +8,10 @@ class Join extends CI_Controller {
                 $this->load->view('join/joinForm');
         }
 
+        public function joinMem(){
+                $memID = $this->input->post("mem_id");
+                echo $memID;
+                var_dump($memID);
+        }
+
 }

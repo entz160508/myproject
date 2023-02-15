@@ -108,7 +108,7 @@
 
                 // <input type="email" name="mem_id" id="mem_id" maxlength="16" autofocus required placeholder="아이디" requireMsg="아이디를 입력해주세요.">
 
-                // var url = "/join/joinMem";
+                var url = "/join/joinMem";
 
                 // var airCd = $("#mem_air_code").val();
                 // var airMemId = $("#mem_air_id").val();
@@ -205,14 +205,14 @@
                 //     }
                 // }
 
-                // var promise = $.ajax({
-                //     url: url,
-                //     data: $('#base_form').serialize(),
-                //     method: "post",
-                //     dataType: "json",
-                //     async: true,
-                //     cache: false
-                // });
+                var promise = $.ajax({
+                    url: url,
+                    data: $('#base_form').serialize(),
+                    method: "post",
+                    dataType: "json",
+                    async: true,
+                    cache: false
+                });
 
                 // promise.done(function (data, textStatus, jqXHR) {
                 //     if(data == true){
