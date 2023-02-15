@@ -4,100 +4,100 @@
 
         $(document).ready(function(){
 
-            $('.jBtnAddTel').click(function(){
-                $('.jRowTel02').show();
-                $(this).hide();
-            });
+            // $('.jBtnAddTel').click(function(){
+            //     $('.jRowTel02').show();
+            //     $(this).hide();
+            // });
 
-            $('.jBtnDelTel').click(function(){
-                $('.jRowTel02').hide();
-                $('.jBtnAddTel').show();
-            });
+            // $('.jBtnDelTel').click(function(){
+            //     $('.jRowTel02').hide();
+            //     $('.jBtnAddTel').show();
+            // });
 
-            $("#mem_id").change(function(){
-                idChkFlag = false;
-            });
+            // $("#mem_id").change(function(){
+            //     idChkFlag = false;
+            // });
 
-            $('.jBtnDuplicate').click(function(){
+            // $('.jBtnDuplicate').click(function(){
 
-                $(".jValidateID_Ok").hide();
-                $(".jValidateID_Fail").hide();
+            //     $(".jValidateID_Ok").hide();
+            //     $(".jValidateID_Fail").hide();
 
-                var url = "/join/checkDuplicateID";
+            //     var url = "/join/checkDuplicateID";
 
-                if(validate_id() == false){
-                    return;
-                }
+            //     if(validate_id() == false){
+            //         return;
+            //     }
 
-                idChkType = false ;
+            //     idChkType = false ;
 
-                var promise = $.ajax({
-                    url: url,
-                    dataType: "json",
-                    data: $('#base_form').serialize(),
-                    method: "post",
-                    cache: false,
-                    async: true
-                });
+            //     var promise = $.ajax({
+            //         url: url,
+            //         dataType: "json",
+            //         data: $('#base_form').serialize(),
+            //         method: "post",
+            //         cache: false,
+            //         async: true
+            //     });
 
-                promise.done(function (data, textStatus, jqXHR) {
-                    if(data == true){
+            //     promise.done(function (data, textStatus, jqXHR) {
+            //         if(data == true){
 
-                        $(".jViewCheckID").html("해당 아이디는 사용이 <b class='red'>가능</b> 합니다.") ;
-                        idChkFlag = true ;
+            //             $(".jViewCheckID").html("해당 아이디는 사용이 <b class='red'>가능</b> 합니다.") ;
+            //             idChkFlag = true ;
 
-                        $(".jValidateID_Ok").show();
+            //             $(".jValidateID_Ok").show();
 
-                    } else {
-                        $(".jValidateID_Fail").show();
-                    }
-                });
+            //         } else {
+            //             $(".jValidateID_Fail").show();
+            //         }
+            //     });
 
-                promise.fail(function (jqXHR, textStatus, errorThrown) {
-                    alert('error');
-                });
+            //     promise.fail(function (jqXHR, textStatus, errorThrown) {
+            //         alert('error');
+            //     });
 
-            });
-
-
-            $("#jMemPW").blur(function(){
-                var memPWD = $(this).val();
-                if(validPWD( memPWD ) == false)
-                    return false;
-            });
-
-            $("#jMemPW, #jMemPWConfirm").blur(function(){
-                var memPWD = $("#jMemPW").val();
-                var memPWDConfirm = $("#jMemPWConfirm").val();
-
-                if(memPWDConfirm == "")
-                {
-                    $(".jValidatePW_Fail").hide();
-                    $(".jValidatePW_Ok").hide();
-                    return false;
-                }
-
-                if(memPWD != memPWDConfirm)
-                {
-                    $(".jValidatePW_Fail").show();
-                    $(".jValidatePW_Ok").hide();
-                    return false;
-                }
-                else
-                {
-                    $(".jValidatePW_Fail").hide();
-                    $(".jValidatePW_Ok").show();
-                    return false;
-                }
-
-            });
+            // });
 
 
+            // $("#jMemPW").blur(function(){
+            //     var memPWD = $(this).val();
+            //     if(validPWD( memPWD ) == false)
+            //         return false;
+            // });
 
-            $('.jCancel').click(function(){
-                history.go(-1);
-                return false;
-            });
+            // $("#jMemPW, #jMemPWConfirm").blur(function(){
+            //     var memPWD = $("#jMemPW").val();
+            //     var memPWDConfirm = $("#jMemPWConfirm").val();
+
+            //     if(memPWDConfirm == "")
+            //     {
+            //         $(".jValidatePW_Fail").hide();
+            //         $(".jValidatePW_Ok").hide();
+            //         return false;
+            //     }
+
+            //     if(memPWD != memPWDConfirm)
+            //     {
+            //         $(".jValidatePW_Fail").show();
+            //         $(".jValidatePW_Ok").hide();
+            //         return false;
+            //     }
+            //     else
+            //     {
+            //         $(".jValidatePW_Fail").hide();
+            //         $(".jValidatePW_Ok").show();
+            //         return false;
+            //     }
+
+            // });
+
+
+
+            // $('.jCancel').click(function(){
+            //     history.go(-1);
+            //     return false;
+            // });
 
 
             $('.jOk').click(function(){
