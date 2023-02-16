@@ -14,7 +14,7 @@ class Gacha extends CI_Controller {
             $this->load->view('gacha/gachaView');
     }
 
-    public function gachaCon(){
+    public function index(){
         // $gachaid = $this->input->post("gachaid");
         // var_dump($gachaid);
 

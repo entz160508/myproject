@@ -10,7 +10,7 @@
                 console.log($('#gachacount').val());
                 console.log($('#count').val());
 
-                var url = "/join/joinMem";
+                // var url = "/join/joinMem";
 
                 // var promise = $.ajax({
                 //     url: url,
@@ -21,19 +21,19 @@
                 //     cache: false
                 // });
 
-                gachaPage();
+                // gachaPage();
                
             });
         });
 
-        function gachaPage()  {
-            window.location.href = 'http://35.206.199.78/gacha/gachaCon'
-        }
+        // function gachaPage()  {
+        //     window.location.href = 'http://35.206.199.78/gacha/gachaCon'
+        // }
 
     </script>
 
     <!-- [D] 컨텐츠 영역 -->
-    <form id="base_form" method="post" action="gacha/gachaCon">
+    <form id="base_form" method="post" action="gacha">
 
     <div id="container">
         <div id="content">
