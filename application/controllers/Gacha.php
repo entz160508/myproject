@@ -24,15 +24,15 @@ class Gacha extends CI_Controller {
         $data = "";
 
         if ($this->input->post('submit') == true) {
-            $data['value1'] = $this->input->post('gachaid');
-            $data['value2'] = $this->input->post('gachacount');
-            $data['value3'] = $this->input->post('count')
+            $data['value1'] = $this->input->post("gachaid");
+            $data['value2'] = $this->input->post("gachacount");
+            $data['value3'] = $this->input->post("count");
             $data['method'] = 'post';
         }
         else if($this->input->get('submit') == true){
-            $data['value1'] = $this->input->get('gachaid');
-            $data['value2'] = $this->input->get('gachacount');
-            $this['value3'] = $this->input->get('count')
+            $data['value1'] = $this->input->get("gachaid");
+            $data['value2'] = $this->input->get("gachacount");
+            $this['value3'] = $this->input->get("count");
             $data['method'] = 'get';
         }
         $this->load->view('gacha/form_receive_view',$data);
