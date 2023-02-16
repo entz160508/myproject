@@ -33,7 +33,7 @@
     </script>
 
     <!-- [D] 컨텐츠 영역 -->
-    <form id="base_form" method="post" action="gachacon">
+    <form id="base_form" method="post" action="gacha/gachaCon">
 
     <div id="container">
         <div id="content">
