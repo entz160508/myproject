@@ -21,6 +21,7 @@ class Gacha extends CI_Controller {
         // console.log($('#gachaid').val());
         // console.log($('#gachacount').val());
         // console.log($('#count').val());
+        $data = "";
 
         if ($this->input->post('submit') == true) {
             $data['value1'] = $this->input->post('gachaid');
