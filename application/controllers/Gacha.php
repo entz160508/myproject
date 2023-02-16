@@ -35,7 +35,8 @@ class Gacha extends CI_Controller {
             $this['value3'] = $this->input->get("count");
             $data['method'] = 'get';
         }
-        $this->load->view('gacha/form_receive_view',$data);
+        // $this->load->view('gacha/form_receive_view',$data);
+        var_dump($_POST);
     }
 
 
